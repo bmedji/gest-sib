@@ -1,0 +1,1 @@
+@include('gestionnaires/tableau_reclamation')
