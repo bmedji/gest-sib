@@ -62,7 +62,7 @@ class HomeController extends Controller
             ->select('reclamations.*','clients.codecli','clients.nomcli','clients.matgest','clients.prenomcli','users.matricule','users.name')
             ->where('reclamations.statutrec','=','Fondée')
             ->where('reclamations.etatrec','=','Traitée')
-            ->where('reclamations.aregulariser','=','Oui')
+            ->where('reclamations.aregulariser','=','Non')
             ->Wherenull('reclamations.PieceComptable')
             ->get();
 
