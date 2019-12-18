@@ -121,9 +121,8 @@ class ReclamationController extends Controller
         $reclamation->codecli = $request->codecli;
         $reclamation->observation = $request->observation;
         $reclamation->idserv = $request->idserv;
-        if($request->aregulariser!=null)
-            $reclamation->valider = "Oui";
         $reclamation->aregulariser = $request->aregulariser;
+        $reclamation->valider = $request->valider;
         $reclamation->save();
         return redirect('/');
     }
