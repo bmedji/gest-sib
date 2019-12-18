@@ -184,7 +184,6 @@ class HomeController extends Controller
                 return view('superviseurs/dashboard_superviseur',compact('reclamations_superviseur_all','services'));
                 break;
             case '4':
-                
                 return view('smc/dashboard_smc',compact('reclamations_smc_a_assigner','reclamations_smc_non_regulariser','reclamations_smc_non_fonder','services_smc'));
                 break;
             case '5':
