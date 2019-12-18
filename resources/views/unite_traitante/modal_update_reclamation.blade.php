@@ -79,7 +79,7 @@
     </div>
 
     <div class="form-group">
-      <input type="hidden" class="form-control" rows="3" id="valider" placeholder="Status validation superviseur" name="valider">
+      <input type="hidden" class="form-control" rows="3" id="valider" value="Oui" placeholder="Status validation superviseur" name="valider">
     </div>
 
 
