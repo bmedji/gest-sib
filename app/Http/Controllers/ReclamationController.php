@@ -110,7 +110,7 @@ class ReclamationController extends Controller
      */
     public function update(Request $request, reclamation $reclamation)
     {
-        //dd($request->all());
+        dd($request->all());
         $reclamation = reclamation::find($request->id);
         $reclamation->referencerec = $request->referencerec;
         $reclamation->motifrec = $request->motifrec;
