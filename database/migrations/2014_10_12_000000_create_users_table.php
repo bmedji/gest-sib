@@ -17,12 +17,24 @@ class CreateUsersTable extends Migration
             $table->increments('id');
             $table->string('matricule')->unique();
             $table->string('name');
-            $table->string('fonctionnalite');
+	    $table->string('surname');
+            $table->integer('idfonc');
             $table->string('password');
-            $table->integer('idserv');
+            $table->string('idserv');
             $table->rememberToken();
             $table->timestamps();
         });
+
+	DB::table('users')->insert(
+            array(
+                'matricule' => '1',
+                'name' =>'Admin',
+		'surname' => 'Admin',
+		'idfonc' => 1,
+		'password' => bcrypt('password'),
+		'idserv' => 0,
+            )
+        );
     }
 
     /**

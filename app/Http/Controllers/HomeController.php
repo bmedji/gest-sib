@@ -123,6 +123,7 @@ class HomeController extends Controller
         $services_users_fonctionnalites = DB::table('users')
             ->join('services', 'services.idserv', '=', 'users.idserv')
             ->join('fonctionnalites','fonctionnalites.codefonc','=','users.idfonc')
+	    ->where('users.matricule','<>',1)
             ->select('users.*','services.idserv','services.libelleserv','fonctionnalites.codefonc','fonctionnalites.libfonc')
             ->get();
         $clients = client::all();
@@ -184,6 +185,7 @@ class HomeController extends Controller
                 return view('superviseurs/dashboard_superviseur',compact('reclamations_superviseur_all','services'));
                 break;
             case '4':
+		dd($reclamations_smc_non_regulariser);
                 return view('smc/dashboard_smc',compact('reclamations_smc_a_assigner','reclamations_smc_non_regulariser','reclamations_smc_non_fonder','services_smc'));
                 break;
             case '5':

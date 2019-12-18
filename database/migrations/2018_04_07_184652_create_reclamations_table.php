@@ -25,6 +25,8 @@ class CreateReclamationsTable extends Migration
             $table->string('PieceComptable');
             $table->string('codecli');
             $table->string('observation');
+	    $table->integer('idserv');
+	    $table->string('valider');
         });
     }
 

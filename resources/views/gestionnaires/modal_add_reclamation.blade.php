@@ -13,11 +13,11 @@
 
       {{ csrf_field() }}
 
-    <div class="form-group">
+   <!--<div class="form-group">
       <label for="Référence">Référence</label>
       <input type="text" class="form-control" id="referencerec" placeholder="Référence" name="referencerec" onkeydown="verifier_cle_primaire(this.id,0)" required="required">
       <div id="error" style="color:red;"></div>
-    </div>
+    </div> -->
 
     <div class="form-group">
       <label for="motif">Motif</label>

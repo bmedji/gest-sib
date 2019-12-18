@@ -43,8 +43,17 @@ class ReclamationController extends Controller
     public function store(Request $request)
     {
         $reclamation = new reclamation();
+	$nbre_reclamations = count(DB::select('select * from reclamations where DATE_FORMAT(created_at,"%Y")=?',[date('Y')]));
+	if(strlen($nbre_reclamations<4)) {
+		$str_nbre_reclamations = str_repeat("0",4-strlen($nbre_reclamations)).$nbre_reclamations;
+	} else {
+		$str_nbre_reclamations = $nbre_reclamation;
+	}
+	
         $file = $request->file('pc');
-        $reclamation['referencerec'] = $request['referencerec'];
+	$reference = "SMC/".date('Y')."/".$str_nbre_reclamations;
+	
+        $reclamation['referencerec'] = $reference;
         $reclamation['motifrec'] = $request['motifrec'];
         $reclamation['resumerec'] = $request['resumerec'];
         //$reclamation['daterecprec'] = date('d/m/Y',strtotime(Date('d/m/Y')));
