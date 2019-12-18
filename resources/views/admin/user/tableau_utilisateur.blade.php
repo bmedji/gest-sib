@@ -16,7 +16,7 @@
                                 <button type="button" class="btn btn-primary" id="lanceur" value="{{ $service_user_fonctionnalite->id }}"  onclick="show_admin(this.value)" data-toggle="modal"  data-target="#modal_update_admin" data-whatever="{{ $service_user_fonctionnalite->id }}" title="Modifier">
                                         <i class="fa fa-edit"></i>
                                 </button>
-                                @if($service_user_fonctionnalite->idfonc!=2)
+                                @if($service_user_fonctionnalite->idfonc!=2 && $service_user_fonctionnalite->idfonc!=1)
                                 
                                     {{ csrf_field() }}
                                     {{ method_field('DELETE') }}
