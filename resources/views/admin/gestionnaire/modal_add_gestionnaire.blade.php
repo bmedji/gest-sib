@@ -9,7 +9,7 @@
         </button>
       </div>
       <div class="modal-body" >
-        <form method="post" action="/enregistrer_gestionnaire">
+        <form method="post" action="enregistrer_gestionnaire">
 
       {{ csrf_field() }}
 

@@ -24,108 +24,108 @@ Route::group(['middleware' => ['auth']], function () {
 
     /**Routes reclamations**/
 
-    Route::get('/superviseur/reclamation','ReclamationController@afficher_toutes_les_reclamations');
+    Route::get('superviseur/reclamation','ReclamationController@afficher_toutes_les_reclamations');
 
-    Route::get('/superviseur/reclamation','ReclamationController@afficher_toutes_les_reclamations');
+    Route::get('superviseur/reclamation','ReclamationController@afficher_toutes_les_reclamations');
 
-    Route::get('/{reclamation}','ReclamationController@show');
+    Route::get('{reclamation}','ReclamationController@show');
 
     Route::post('/', 'ReclamationController@store');
 
-    Route::post('/update','ReclamationController@update');
+    Route::post('update','ReclamationController@update');
 
-    Route::delete('/{reclamation}', 'ReclamationController@destroy');
+    Route::delete('{reclamation}', 'ReclamationController@destroy');
 
 
     /**Routes user **/
-    Route::get('/admin/showUser/{user}','UserController@show');
+    Route::get('admin/showUser/{user}','UserController@show');
 
-    Route::post('/enregistrer_user','UserController@store');
+    Route::post('enregistrer_user','UserController@store');
 
-    Route::post('/admin/update/user','UserController@update');
+    Route::post('admin/update/user','UserController@update');
 
-    Route::delete('/admin/delete_user/{user}','UserController@destroy');
+    Route::delete('admin/delete_user/{user}','UserController@destroy');
 
 
     /**Routes direction **/
 
-    Route::get('/admin/showDirection/{direction}','DirectionController@show');
+    Route::get('admin/showDirection/{direction}','DirectionController@show');
 
-    Route::post('/enregistrer_direction','DirectionController@store');
+    Route::post('enregistrer_direction','DirectionController@store');
 
-    Route::post('/admin/update/direction','DirectionController@update');
+    Route::post('admin/update/direction','DirectionController@update');
 
-    Route::delete('/admin/delete_direction/{direction}','DirectionController@destroy');
+    Route::delete('admin/delete_direction/{direction}','DirectionController@destroy');
 
     /**Routes type service **/
 
-    Route::get('/admin/showTypeService/{type_service}','TypeServiceController@show');
+    Route::get('admin/showTypeService/{type_service}','TypeServiceController@show');
 
-    Route::post('/enregistrer_type_service','TypeServiceController@store');
+    Route::post('enregistrer_type_service','TypeServiceController@store');
 
-    Route::post('/admin/update/type_service','TypeServiceController@update');
+    Route::post('admin/update/type_service','TypeServiceController@update');
 
-    Route::delete('/admin/delete_type_service/{type_service}','TypeServiceController@destroy');
+    Route::delete('admin/delete_type_service/{type_service}','TypeServiceController@destroy');
 
     /**Routes service **/
 
-    Route::get('/superviseur/services','ServiceController@afficher_tout_les_services');
+    Route::get('superviseur/services','ServiceController@afficher_tout_les_services');
 
-    Route::get('/admin/showService/{service}','ServiceController@show');
+    Route::get('admin/showService/{service}','ServiceController@show');
 
-    Route::post('/enregistrer_service','ServiceController@store');
+    Route::post('enregistrer_service','ServiceController@store');
 
-    Route::post('/admin/update/service','ServiceController@update');
+    Route::post('admin/update/service','ServiceController@update');
 
-    Route::delete('/admin/delete_service/{service}','ServiceController@destroy');
+    Route::delete('admin/delete_service/{service}','ServiceController@destroy');
 
     /**Routes gestionnaire **/
 
-    Route::get('/admin/showGestionnaire/{gestionnaire}','GestionnaireController@show');
+    Route::get('admin/showGestionnaire/{gestionnaire}','GestionnaireController@show');
 
-    Route::post('/enregistrer_gestionnaire','GestionnaireController@store');
+    Route::post('enregistrer_gestionnaire','GestionnaireController@store');
 
-    Route::post('/admin/update/gestionnaire','GestionnaireController@update');
+    Route::post('admin/update/gestionnaire','GestionnaireController@update');
 
-    Route::delete('/admin/delete_gestionnaire/{gestionnaire}','GestionnaireController@destroy');
+    Route::delete('admin/delete_gestionnaire/{gestionnaire}','GestionnaireController@destroy');
 
     /**Routes client **/
 
-    Route::get('/admin/showClient/{client}','ClientController@show');
+    Route::get('admin/showClient/{client}','ClientController@show');
 
-    Route::post('/enregistrer_client','ClientController@store');
+    Route::post('enregistrer_client','ClientController@store');
 
-    Route::post('/admin/update/client','ClientController@update');
+    Route::post('admin/update/client','ClientController@update');
 
-    Route::delete('/admin/delete_client/{client}','ClientController@destroy');
+    Route::delete('admin/delete_client/{client}','ClientController@destroy');
 
     /**Routes agence **/
 
-    Route::get('/admin/showAgence/{agence}','AgenceController@show');
+    Route::get('admin/showAgence/{agence}','AgenceController@show');
 
-    Route::post('/enregistrer_agence','AgenceController@store');
+    Route::post('enregistrer_agence','AgenceController@store');
 
-    Route::post('/admin/update/agence','AgenceController@update');
+    Route::post('admin/update/agence','AgenceController@update');
 
-    Route::delete('/admin/delete_agence/{agence}','AgenceController@destroy');
+    Route::delete('admin/delete_agence/{agence}','AgenceController@destroy');
 
     /**Routes fonctionnalite **/
 
-    Route::get('/admin/showFonctionnalite/{fonctionnalite}','FonctionnaliteController@show');
+    Route::get('admin/showFonctionnalite/{fonctionnalite}','FonctionnaliteController@show');
 
-    Route::post('/enregistrer_fonctionnalite','FonctionnaliteController@store');
+    Route::post('enregistrer_fonctionnalite','FonctionnaliteController@store');
 
-    Route::post('/admin/update/fonctionnalite','FonctionnaliteController@update');
+    Route::post('admin/update/fonctionnalite','FonctionnaliteController@update');
 
-    Route::delete('/admin/delete_fonctionnalite/{fonctionnalite}','FonctionnaliteController@destroy');
+    Route::delete('admin/delete_fonctionnalite/{fonctionnalite}','FonctionnaliteController@destroy');
 
 
     //Routes verification
 
-    Route::get('/verification/reclamation','VerificationController@retourner_toutes_reclamations');
+    Route::get('verification/reclamation','VerificationController@retourner_toutes_reclamations');
 
     //Routes storage
 
-    Route::get('/find/{file}','ReclamationController@getFile');    
+    Route::get('find/{file}','ReclamationController@getFile');    
 });
 

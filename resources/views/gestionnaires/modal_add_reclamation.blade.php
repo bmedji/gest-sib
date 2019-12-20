@@ -9,7 +9,7 @@
         </button>
       </div>
       <div class="modal-body" >
-        <form method="post" action="/" enctype="multipart/form-data">
+        <form method="post" action="" enctype="multipart/form-data">
 
       {{ csrf_field() }}
 

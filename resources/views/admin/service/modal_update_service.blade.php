@@ -9,7 +9,7 @@
         </button>
       </div>
       <div class="modal-body" >
-        <form method="post" action="/admin/update/service">
+        <form method="post" action="admin/update/service">
 
       {{ csrf_field() }}
     <input type="hidden" id="id" name="id" />

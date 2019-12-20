@@ -10,7 +10,7 @@
       </div>
        
       <div class="modal-body" >
-        <form method="post" action="/enregistrer_user">
+        <form method="post" action="enregistrer_user">
 
       {{ csrf_field() }}
 

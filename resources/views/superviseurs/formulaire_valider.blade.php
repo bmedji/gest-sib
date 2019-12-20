@@ -1,4 +1,4 @@
-<form method="post" action="/update">
+<form method="post" action="update">
 
       {{ csrf_field() }}
       <input type="hidden" id="id" name="id"/>

@@ -9,7 +9,7 @@
         </button>
       </div>
       <div class="modal-body" >
-        <form method="post" action="/enregistrer_fonctionnalite">
+        <form method="post" action="enregistrer_fonctionnalite">
 
       {{ csrf_field() }}
 
