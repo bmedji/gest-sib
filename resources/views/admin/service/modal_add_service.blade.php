@@ -35,7 +35,7 @@
     </div>
 
     <div class="form-group">
-      <label class="control-label" for="codecli">Direction</label>
+      <label class="control-label" for="codecli">Type de service</label>
       <div>
           <select class="form-control" id="idtypeserv" name="idtypeserv">
             <option value="" disabled="true">Choisir un Type Service</option>
