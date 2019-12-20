@@ -39,4 +39,21 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    public function showLoginForm() {
+        return view('auth.login');
+    }
+
+    public function login(Request $request) {        
+        if(Auth::attempt(['matricule' => $request->matricule, 'password' => $request->password])) {
+            return redirect("/");
+        } else {
+            return redirect()->back()->with("erreur","Nom d'utilisateur ou mot de passe incorrect(s)");
+        }
+    }
+
+    public function logout(Request $request) {
+        Auth::logout();
+        return redirect("/login");
+    }
 }
